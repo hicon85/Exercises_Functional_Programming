@@ -1,0 +1,17 @@
+using System;
+using System.Linq;
+
+namespace _03.Custom_Min_Function
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Func<int[],int> number = n => n.Min();
+            int[] numbers = Console.ReadLine().Split()
+                .Select(int.Parse).ToArray();
+
+            Console.WriteLine(number(numbers));
+        }
+    }
+}
