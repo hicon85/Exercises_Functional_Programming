@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace _02.Knights_of_Honor
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Func<string, string> addPrefix = str => str.Insert(0, "Sir ");
+            Console.ReadLine().Split(" ",
+                StringSplitOptions.RemoveEmptyEntries).Select(addPrefix).ToList().ForEach(Console.WriteLine);
+        }
+    }
+}
+
